@@ -1,31 +1,43 @@
-import * as Dialog from "@radix-ui/react-dialog"
-import { ReactNode } from "react"
+import { ReactNode, Fragment } from "react"
+import { Dialog, Transition } from "@headlessui/react"
 
 interface IModal {
-  trigger: ReactNode
-  content: ReactNode
+  isOpen: boolean
+  handleSetOpen: (setOpen: boolean) => void
+  children: ReactNode
 }
 
-export function Modal({ trigger, content }: IModal) {
+export function Modal({ isOpen, handleSetOpen, children }: IModal) {
   return (
-    <Dialog.Root>
-      <Dialog.Trigger>{trigger}</Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay className="bg-black fixed inset-0 opacity-60" />
-        <Dialog.Content
-          className="
-            max-w-[500px] w-full
-            absolute
-            text-gray-100 
-            top-1/2 
-            left-1/2 
-            translate-x-[-50%] 
-            translate-y-[-50%]
-          "
+    <Transition appear show={isOpen} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={handleSetOpen}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
         >
-          {content}
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+          <div className="fixed inset-0 bg-black bg-opacity-60" />
+        </Transition.Child>
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Dialog.Panel>{children}</Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
+    </Transition>
   )
 }

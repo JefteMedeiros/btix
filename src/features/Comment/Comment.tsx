@@ -1,8 +1,9 @@
 import { BsHeart } from "react-icons/bs"
 import { ProfilePicture } from "../../components"
 import * as Separator from "@radix-ui/react-separator"
+import { IComment } from "../../interfaces/posts"
 
-export function Comment() {
+export function Comment({ ...comment }: IComment) {
   return (
     <>
       <Separator.Root
@@ -18,15 +19,13 @@ export function Comment() {
               picture="https://github.com/JefteMedeiros.png"
             />
             <h6 title="_jeffmedeiros.tsx" className="text-body-3">
-              _jeffmedeiros.tsx
+              {comment.email}
             </h6>
           </div>
           <h6 className="text-body-3">há 23m</h6>
         </header>
         <h4 className="text-body-3" title="Descrição">
-          Gostaria de apresentá-los meu mais novo NFT, o Bored Cat! As vantagens
-          de ter um bored cat vão desde poder participar do Bored Cat Yacht Club
-          até...{" "}
+          {comment.body}{" "}
           <button className="text-body-4" title="Ler mais">
             Ler mais
           </button>

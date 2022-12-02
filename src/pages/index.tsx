@@ -1,13 +1,25 @@
+import { InferGetServerSidePropsType } from "next"
 import Head from "next/head"
-import { Post } from "../components/Post/Post"
-import { Header, ProfileCard } from "../features"
-import { CreatePost } from "../features"
-import { Friends } from "../features/Friends/Friends"
-import { HomeColumn } from "../features/HomeColumn"
-import { HomeNav } from "../features/HomeNav/HomeNav"
+import { Header } from "../features"
+import { CenterPanel } from "../features/CenterPanel"
+import { LeftPanel } from "../features/LeftPanel/LeftPanel"
+import { RightPanel } from "../features/RightPanel"
 import { Template } from "../template"
 
-export default function Home() {
+export async function getServerSideProps() {
+  const posts = await fetch("https://jsonplaceholder.typicode.com/posts")
+  const postsData = await posts.json()
+
+  return {
+    props: {
+      postsData,
+    },
+  }
+}
+
+type IHome = InferGetServerSidePropsType<typeof getServerSideProps>
+
+export default function Home({ postsData }: IHome) {
   return (
     <Template>
       <Head>
@@ -15,17 +27,9 @@ export default function Home() {
       </Head>
       <Header />
       <section className="mt-9 gap-x-14 grid grid-cols-body-grid">
-        <HomeColumn>
-          <ProfileCard />
-          <HomeNav />
-        </HomeColumn>
-        <HomeColumn>
-          <CreatePost />
-          <Post />
-        </HomeColumn>
-        <HomeColumn>
-          <Friends />
-        </HomeColumn>
+        <LeftPanel />
+        <CenterPanel data={postsData} />
+        <RightPanel />
       </section>
     </Template>
   )

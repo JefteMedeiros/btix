@@ -1,12 +1,26 @@
 import Image from "next/image"
-import { BsBookmark, BsChat, BsHeart, BsThreeDots } from "react-icons/bs"
+import {
+  BsBookmark,
+  BsChat,
+  BsCommand,
+  BsHeart,
+  BsThreeDots,
+} from "react-icons/bs"
 import { HiOutlinePaperAirplane } from "react-icons/hi"
 import { Box } from "../Box"
 import { ProfilePicture } from "../ProfilePicture"
+import { IPost } from "../../interfaces/posts"
+import { useState } from "react"
 import { Modal } from "../Modal"
-import { CommentModalContent } from "../../features/CommentModalContent"
+import { CommentModal } from "../../features/CommentModal"
 
-export function Post() {
+export function Post({ ...post }: IPost) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleSetOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <Box className="py-3 flex flex-col gap-3 px-4">
       <header className="flex items-center justify-between gap-2">
@@ -25,9 +39,7 @@ export function Post() {
         </button>
       </header>
       <h4 className="text-body-3" title="Descrição">
-        Gostaria de apresentá-los meu mais novo NFT, o Bored Cat! As vantagens
-        de ter um bored cat vão desde poder participar do Bored Cat Yacht Club
-        até...{" "}
+        {post.body}
         <button className="text-body-4" title="Ler mais">
           Ler mais
         </button>
@@ -51,10 +63,16 @@ export function Post() {
           <button>
             <BsHeart size={16} />
           </button>
-          <Modal
-            trigger={<BsHeart size={16} />}
-            content={<CommentModalContent />}
-          />
+          <button onClick={() => handleSetOpen()}>
+            <BsChat />
+          </button>
+          {isOpen && (
+            <CommentModal
+              isOpen={isOpen}
+              handleSetOpen={handleSetOpen}
+              postId={post.id}
+            />
+          )}
         </div>
       </section>
       <h4 className="text-body-3" title="371 curtidas">
