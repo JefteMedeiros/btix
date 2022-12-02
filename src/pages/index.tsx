@@ -22,6 +22,8 @@ export default function Home() {
         <HomeColumn>
           <CreatePost />
           <Post />
+          <Post />
+          <Post />
         </HomeColumn>
         <HomeColumn>
           <Friends />

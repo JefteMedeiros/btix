@@ -4,7 +4,7 @@ import { Box, ProfilePicture } from "../../components"
 
 export function Friends() {
   return (
-    <Box className="flex  flex-col gap-5 items-center px-4 py-3">
+    <Box className="flex flex-col gap-5 sticky top-8 items-center px-4 py-3">
       <header>
         <h2 className="text-title-1">Chat</h2>
       </header>
