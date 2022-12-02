@@ -16,7 +16,11 @@ const titillium = Titillium_Web({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${nunito.variable} font-sans, ${titillium.variable} font-sans`}>
+    <main
+      className={`${nunito.variable} font-sans,
+        ${titillium.variable} font-sans,
+      bg-black-700`}
+    >
       <Component {...pageProps} />
     </main>
   )
