@@ -6,7 +6,7 @@ import { ProfilePicture } from "../../components"
 
 export function ProfileCard() {
   return (
-    <Box className="flex flex-col text-center font-nunito text-gray-100">
+    <Box className="flex flex-col text-center font-nunito ">
       <div className="relative h-28">
         <Image
           fill

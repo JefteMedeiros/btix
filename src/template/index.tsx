@@ -6,6 +6,8 @@ interface ITemplate {
 
 export function Template({ children }: ITemplate) {
   return (
-    <div className="min-h-screen m-auto px-4 max-w-wrapper">{children}</div>
+    <div className="min-h-screen m-auto px-4 text-gray-100 max-w-wrapper">
+      {children}
+    </div>
   )
 }

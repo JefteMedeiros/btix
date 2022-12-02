@@ -3,7 +3,7 @@ import { Box } from "../../components"
 
 export function HomeNav() {
   return (
-    <Box className="py-3 px-4">
+    <Box className="py-3  px-4">
       <ul className="flex flex-col gap-4">
         <li className="flex items-center gap-2">
           <BsHouse />

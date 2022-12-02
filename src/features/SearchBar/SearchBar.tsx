@@ -7,7 +7,7 @@ export function SearchBar() {
           max-w-full
           w-full
           peer
-          text-gray-100
+          
           caret-gray-100
           outline-none
         "
@@ -31,7 +31,7 @@ export function SearchBar() {
           peer-focus:text-body-5 
           transition-all 
           left-2 bottom-1 
-          text-gray-100
+          
         "
         htmlFor="search"
       >

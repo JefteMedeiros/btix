@@ -22,7 +22,7 @@ export function Header() {
           md:block 
           text-[2rem] 
           tracking-[0.3rem] 
-          text-gray-100 
+           
           font-titillium
         "
       >
@@ -42,12 +42,12 @@ export function Header() {
           text-right 
           md:block 
           text-title-1 
-          text-gray-100
+          
         "
       >
         Sair
       </Link>
-      <BsChat size={24} className="block ml-auto md:hidden text-gray-100" />
+      <BsChat size={24} className="block ml-auto md:hidden " />
     </header>
   )
 }

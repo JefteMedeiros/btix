@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { Post } from "../components/Post/Post"
 import { Header, ProfileCard } from "../features"
 import { CreatePost } from "../features"
 import { Friends } from "../features/Friends/Friends"
@@ -20,6 +21,7 @@ export default function Home() {
         </HomeColumn>
         <HomeColumn>
           <CreatePost />
+          <Post />
         </HomeColumn>
         <HomeColumn>
           <Friends />

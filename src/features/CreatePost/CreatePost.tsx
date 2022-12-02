@@ -4,7 +4,7 @@ import { HiOutlinePhotograph } from "react-icons/hi"
 
 export function CreatePost() {
   return (
-    <Box className="py-3 px-4 flex flex-col gap-4 text-gray-100">
+    <Box className="py-3 px-4 flex flex-col gap-4 ">
       <header className="flex items-center gap-2">
         <ProfilePicture
           width={32}
@@ -17,7 +17,15 @@ export function CreatePost() {
         <textarea
           id="comment"
           name="comment"
-          className="peer mx-2 text-body-2 my-2 outline-none w-full min-h-[96px]"
+          className="
+            peer 
+            mx-2 
+            text-body-2 
+            my-2 
+            outline-none 
+            w-full 
+            min-h-[96px]
+          "
           title="Comment"
           required
         />

@@ -10,7 +10,7 @@ export function Button({ label, className }: IButton) {
         py-1 
         px-4 
         border-2 
-        text-gray-100 
+         
         rounded-default 
         b-gray-100 
         ${className}

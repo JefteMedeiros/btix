@@ -4,7 +4,7 @@ import { Box, ProfilePicture } from "../../components"
 
 export function Friends() {
   return (
-    <Box className="flex flex-col gap-5 items-center px-4 py-3">
+    <Box className="flex  flex-col gap-5 items-center px-4 py-3">
       <header>
         <h2 className="text-title-1">Chat</h2>
       </header>
@@ -20,7 +20,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
@@ -34,7 +34,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
@@ -48,7 +48,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
@@ -62,7 +62,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
@@ -76,7 +76,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
@@ -90,7 +90,7 @@ export function Friends() {
               <h2 className="text-body-2">_jeffmedeiros.tsx</h2>
               <div className="relative">
                 <h6 className="text-body-3 inline">Ativo agora</h6>
-                <span className="absolute top-1/2 right-8  translate-y-[-25%] w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="absolute top-1/2 right-6 translate-y-[-15%] w-2 h-2 bg-green-500 rounded-full"></span>
               </div>
             </div>
           </li>
