@@ -19,6 +19,7 @@ export function SearchBar() {
       />
       <label
         className="
+          opacity-50
           cursor-text
           absolute
           select-none

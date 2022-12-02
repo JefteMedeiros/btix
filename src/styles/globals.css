@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+textarea {
+  resize: none;
+}
+
+input, button, textarea {
+  background: transparent;
+}

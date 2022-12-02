@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Box } from "../../components"
 import { Button } from "../../components/Button"
+import { ProfilePicture } from "../../components"
 
 export function ProfileCard() {
   return (
@@ -13,12 +14,11 @@ export function ProfileCard() {
           alt="asdf"
           src="https://api.lorem.space/image/car?w=314&h=116"
         />
-        <Image
-          className="rounded-full left-1/2 translate-x-[-50%] top-10 absolute"
+        <ProfilePicture
+          className="absolute left-1/2 translate-x-[-50%] top-10"
+          picture="https://github.com/JefteMedeiros.png"
           width={86}
           height={86}
-          src="https://github.com/JefteMedeiros.png"
-          alt=""
         />
       </div>
       <div className="m-auto">

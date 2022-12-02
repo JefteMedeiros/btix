@@ -1,6 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { BsChat } from "react-icons/bs"
+import { ProfilePicture } from "../../components"
 import { SearchBar } from "../SearchBar"
 
 export function Header() {
@@ -28,12 +28,11 @@ export function Header() {
       >
         Infinitum.
       </div>
-      <Image
-        className="rounded-full block md:hidden"
+      <ProfilePicture
+        picture="https://github.com/JefteMedeiros.png"
+        className="block md:hidden"
         width={32}
         height={32}
-        src="https://github.com/JefteMedeiros.png"
-        alt=""
       />
       <SearchBar />
       <Link
