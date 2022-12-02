@@ -42,7 +42,6 @@ export function Header() {
           text-right 
           md:block 
           text-title-1 
-          hover:underline 
           text-gray-100
         "
       >

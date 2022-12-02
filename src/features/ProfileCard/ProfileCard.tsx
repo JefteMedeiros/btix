@@ -25,7 +25,7 @@ export function ProfileCard() {
         <h2 className="text-title-1 mt-7">Jeff Medeiros</h2>
         <h4 className="text-body-2">Frontend engineer</h4>
         <Button className="mt-3" label="Visualizar perfil" />
-        <Link href="#" className="block hover:underline text-body-3 mt-4 mb-3">
+        <Link href="#" className="block text-body-3 mt-4 mb-3">
           @_jeffmedeiros.tsx
         </Link>
       </div>

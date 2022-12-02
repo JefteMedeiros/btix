@@ -41,14 +41,14 @@ export function CreatePost() {
                 accept="image/jpg, image/png, image/webp, image/jpeg, ."
               />
             </label>
-            <span className="text-body-5">Foto</span>
+            <span className="text-body-4">Foto</span>
           </div>
           <div>
             <label>
               <input type="file" accept=".mp4, .mkv" />
               <BsFillCameraVideoFill className="inline mr-1" size={16} />
             </label>
-            <span className="text-body-5">Vídeo</span>
+            <span className="text-body-4">Vídeo</span>
           </div>
         </div>
       </footer>
