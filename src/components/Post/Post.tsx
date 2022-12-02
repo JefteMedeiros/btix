@@ -41,7 +41,7 @@ export function Post({ ...post }: IPost) {
       <h4 className="text-body-3" title="Descrição">
         {post.body}
         <button className="text-body-4" title="Ler mais">
-          Ler mais
+          &nbsp;Ler mais
         </button>
       </h4>
       <main title="Imagem" className="relative h-44">

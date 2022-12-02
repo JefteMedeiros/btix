@@ -25,9 +25,9 @@ export function Comment({ ...comment }: IComment) {
           <h6 className="text-body-3">há 23m</h6>
         </header>
         <h4 className="text-body-3" title="Descrição">
-          {comment.body}{" "}
+          {comment.body}
           <button className="text-body-4" title="Ler mais">
-            Ler mais
+            &nbsp;Ler mais
           </button>
         </h4>
         <footer className="flex justify-between items-center">

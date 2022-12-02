@@ -3,7 +3,7 @@ import { HomeColumn } from "../HomeColumn"
 
 export function RightPanel() {
   return (
-    <HomeColumn>
+    <HomeColumn className="hidden md:block">
       <Friends />
     </HomeColumn>
   )

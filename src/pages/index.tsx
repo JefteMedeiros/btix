@@ -26,7 +26,7 @@ export default function Home({ postsData }: IHome) {
         <title>Infinitum | Home</title>
       </Head>
       <Header />
-      <section className="mt-9 gap-x-14 grid grid-cols-body-grid">
+      <section className="grid grid-cols-1 md:grid-cols-body-grid gap-x-14 mt-9">
         <LeftPanel />
         <CenterPanel data={postsData} />
         <RightPanel />
