@@ -6,6 +6,10 @@ textarea {
   resize: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
 input, button, textarea {
   background: transparent;
 }
@@ -15,6 +19,6 @@ a:hover {
   cursor: pointer;
 }
 
-input[type="file"] {
+label input[type="file"] {
   display: none;
 }

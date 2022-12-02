@@ -3,6 +3,8 @@ import { BsBookmark, BsChat, BsHeart, BsThreeDots } from "react-icons/bs"
 import { HiOutlinePaperAirplane } from "react-icons/hi"
 import { Box } from "../Box"
 import { ProfilePicture } from "../ProfilePicture"
+import { Modal } from "../Modal"
+import { CommentModalContent } from "../../features/CommentModalContent"
 
 export function Post() {
   return (
@@ -49,9 +51,10 @@ export function Post() {
           <button>
             <BsHeart size={16} />
           </button>
-          <button>
-            <BsChat size={16} />
-          </button>
+          <Modal
+            trigger={<BsHeart size={16} />}
+            content={<CommentModalContent />}
+          />
         </div>
       </section>
       <h4 className="text-body-3" title="371 curtidas">
