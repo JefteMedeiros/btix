@@ -9,3 +9,7 @@ textarea {
 input, button, textarea {
   background: transparent;
 }
+
+input[type="file"] {
+  display: none;
+}

@@ -34,11 +34,20 @@ export function CreatePost() {
         </div>
         <div className="flex gap-2 items-center">
           <div>
-            <HiOutlinePhotograph className="inline mr-2" size={16} />
+            <label>
+              <HiOutlinePhotograph className="inline mr-1" size={16} />
+              <input
+                type="file"
+                accept="image/jpg, image/png, image/webp, image/jpeg, ."
+              />
+            </label>
             <span className="text-body-5">Foto</span>
           </div>
           <div>
-            <BsFillCameraVideoFill className="inline mr-2" size={16} />
+            <label>
+              <input type="file" accept=".mp4, .mkv" />
+              <BsFillCameraVideoFill className="inline mr-1" size={16} />
+            </label>
             <span className="text-body-5">Vídeo</span>
           </div>
         </div>
