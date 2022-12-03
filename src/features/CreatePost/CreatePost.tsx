@@ -26,7 +26,6 @@ export function CreatePost() {
             w-full 
             min-h-[96px]
           "
-          title="Comment"
           required
         />
         <label

@@ -14,6 +14,11 @@ const nextConfig = {
         hostname: "api.lorem.space",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+        pathname: "/**",
+      },
     ],
   },
 }

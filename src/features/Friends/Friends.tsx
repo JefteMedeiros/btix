@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BsDot } from "react-icons/bs"
 import { Box, ProfilePicture } from "../../components"
 
 export function Friends() {

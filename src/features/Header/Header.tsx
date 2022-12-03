@@ -7,16 +7,17 @@ export function Header() {
   return (
     <header
       className="
-        grid 
-        grid-cols-body-grid 
-        gap-x-14 
+        flex
+        gap-6
+        md:grid 
+        md:grid-cols-body-grid 
+        md:gap-x-14 
         py-9 
         justify-between 
         items-center
       "
     >
       <div
-        title="Logo"
         className="
           hidden
           md:block 

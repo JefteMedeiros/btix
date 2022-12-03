@@ -4,7 +4,7 @@ import { ProfileCard } from "../ProfileCard"
 
 export function LeftPanel() {
   return (
-    <HomeColumn className="hidden md:block">
+    <HomeColumn className="hidden md:flex">
       <ProfileCard />
       <HomeNav />
     </HomeColumn>

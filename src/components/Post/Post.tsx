@@ -1,17 +1,10 @@
 import Image from "next/image"
-import {
-  BsBookmark,
-  BsChat,
-  BsCommand,
-  BsHeart,
-  BsThreeDots,
-} from "react-icons/bs"
+import { BsBookmark, BsChat, BsHeart, BsThreeDots } from "react-icons/bs"
 import { HiOutlinePaperAirplane } from "react-icons/hi"
 import { Box } from "../Box"
 import { ProfilePicture } from "../ProfilePicture"
 import { IPost } from "../../interfaces/posts"
 import { useState } from "react"
-import { Modal } from "../Modal"
 import { CommentModal } from "../../features/CommentModal"
 
 export function Post({ ...post }: IPost) {
@@ -28,23 +21,21 @@ export function Post({ ...post }: IPost) {
           <ProfilePicture
             width={32}
             height={32}
-            picture="https://github.com/JefteMedeiros.png"
+            picture={`https://randomuser.me/api/portraits/thumb/men/${Math.ceil(
+              post.body.length / 4,
+            )}.jpg`}
           />
-          <h6 title="_jeffmedeiros.tsx" className="text-body-3">
-            _jeffmedeiros.tsx
-          </h6>
+          <h6 className="text-body-3">_jeffmedeiros</h6>
         </div>
         <button>
-          <BsThreeDots title="Opções" className="rotate-90" />
+          <BsThreeDots className="rotate-90" />
         </button>
       </header>
-      <h4 className="text-body-3" title="Descrição">
+      <h4 className="text-body-3">
         {post.body}
-        <button className="text-body-4" title="Ler mais">
-          &nbsp;Ler mais
-        </button>
+        <button className="text-body-4">&nbsp;Ler mais</button>
       </h4>
-      <main title="Imagem" className="relative h-44">
+      <main className="relative h-44">
         <Image
           fill
           className="rounded-default object-cover"
@@ -75,9 +66,7 @@ export function Post({ ...post }: IPost) {
           )}
         </div>
       </section>
-      <h4 className="text-body-3" title="371 curtidas">
-        371 curtidas
-      </h4>
+      <h4 className="text-body-3">{post.body.length} curtidas</h4>
       <footer className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <ProfilePicture
@@ -87,16 +76,13 @@ export function Post({ ...post }: IPost) {
           />
           <input
             type="text"
-            title="comment"
             id="comment"
             className="outline-none peer text-body-3"
             placeholder="Adicionar comentário"
             required
           />
         </div>
-        <h6 className="text-body-5" title="Publicado há 7h">
-          Publicado há 7h
-        </h6>
+        <h6 className="text-body-5">Publicado há 7h</h6>
       </footer>
     </Box>
   )

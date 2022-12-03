@@ -19,7 +19,7 @@ export function ProfilePicture({
       width={width}
       height={height}
       src={picture}
-      alt="Profile picture"
+      alt="Foto de perfil"
     />
   )
 }

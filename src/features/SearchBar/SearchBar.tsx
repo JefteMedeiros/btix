@@ -14,7 +14,6 @@ export function SearchBar() {
         type="text"
         name="search"
         id="search"
-        title="Pesquisar"
         required
       />
       <label

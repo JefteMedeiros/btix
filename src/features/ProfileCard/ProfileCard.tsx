@@ -11,7 +11,7 @@ export function ProfileCard() {
         <Image
           fill
           className="rounded-tl-default rounded-tr-default object-contain"
-          alt="asdf"
+          alt="Foto de fundo"
           src="https://api.lorem.space/image/car?w=314&h=116"
         />
         <ProfilePicture

@@ -39,7 +39,7 @@ export function CommentModalContent({
           <ProfilePicture
             width={32}
             height={32}
-            picture="https://github.com/JefteMedeiros.png"
+            picture={`https://randomuser.me/api/portraits/thumb/men/${postId}.jpg`}
           />
           <h6 className="text-body-3">_jeffmedeiros.tsx</h6>
         </div>
@@ -60,7 +60,6 @@ export function CommentModalContent({
           />
           <input
             type="text"
-            title="comment"
             id="comment"
             className="outline-none flex-1 peer text-body-3"
             placeholder="Adicionar comentário"

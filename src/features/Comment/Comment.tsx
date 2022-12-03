@@ -16,26 +16,22 @@ export function Comment({ ...comment }: IComment) {
             <ProfilePicture
               width={32}
               height={32}
-              picture="https://github.com/JefteMedeiros.png"
+              picture={`https://randomuser.me/api/portraits/thumb/men/${Math.ceil(
+                comment.name.length,
+              )}.jpg`}
             />
-            <h6 title="_jeffmedeiros.tsx" className="text-body-3">
-              {comment.email}
-            </h6>
+            <h6 className="text-body-3">{comment.email}</h6>
           </div>
           <h6 className="text-body-3">há 23m</h6>
         </header>
-        <h4 className="text-body-3" title="Descrição">
+        <h4 className="text-body-3">
           {comment.body}
-          <button className="text-body-4" title="Ler mais">
-            &nbsp;Ler mais
-          </button>
+          <button className="text-body-4">&nbsp;Ler mais</button>
         </h4>
         <footer className="flex justify-between items-center">
           <h6 className="text-body-3">Responder</h6>
           <div className="flex gap-2 items-center">
-            <h6 className="text-body-3" title="27 Curtidas">
-              27
-            </h6>
+            <h6 className="text-body-3">27</h6>
             <button>
               <BsHeart />
             </button>
